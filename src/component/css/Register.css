@@ -1,0 +1,27 @@
+.Register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .RegisterForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    width: 80px; /* 적절한 너비 설정 */
+    margin-right: 10px;
+  }
+  
+  .form-group input {
+    flex: 1;
+  }
+  

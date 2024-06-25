@@ -1,0 +1,33 @@
+.html {
+    margin: 0;
+    padding: 0;
+}
+.subMenu {
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+.subMenu > .imageContainer {
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.subMenu > .imageContainer > .myImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.subMenu > .myId {
+    text-align: center;
+}
+.subMenu > .logOut {
+    margin: auto;
+    display: block;
+}

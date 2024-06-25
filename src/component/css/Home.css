@@ -1,0 +1,20 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+.register{
+    margin-left: 50px;
+  }
+  .RegisterButton > button{
+    font-size: 20px; /* 버튼 사이즈 설정 */
+    padding: 10px 10px;/* 버튼 사이즈 설정 */
+    border-radius: 10px; /* 버튼 원형 정도 */
+    border: none; /* 버튼 태두리 제거 */
+    color: white; /* 폰트색 흰색 */
+    background-color: black; /* 배경색 검정 */ 
+    text-align: center; /* 텍스트 중앙 */
+    display: inline-block; /* 버튼 형식 inline-block 으로 지정 */
+    cursor: pointer; /* 버튼 hover시에 커서변경*/
+  }
