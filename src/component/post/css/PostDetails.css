@@ -1,0 +1,40 @@
+.detail_post_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면의 전체 높이 */
+}
+
+.detail_post_area {
+    width: 1280px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 (선택 사항) */
+}
+
+.detail_post_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.detail_post_meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail_post_author, .detail_post_time {
+    margin: 0;
+}
+
+.detail_post_area > .detail_post_meta > .detail_post_author{
+    font-weight: bold;
+}
+.detail_post_area > .detail_post_meta > .detail_post_time{
+}
+
+.detail_post_content {
+    font-size: 16px;
+    line-height: 1.5;
+}
