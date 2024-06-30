@@ -18,6 +18,15 @@ function MainPage() {
         navigate('/');
     };
 
+    const handlewritePost = () => {
+        navigate('/writepost');
+    }
+    const handlemyPost = () => {
+        navigate('/mypost');
+    }
+    const handleAllPost = () => {
+        navigate('/allpost');
+    }
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth2, (currentUser) => {
             setUser(currentUser);
@@ -38,6 +47,9 @@ function MainPage() {
                     </div>
                     <p className="myId">아이디 : {user?.email}</p>
                     <button className="logOut" onSubmit={logout} onClick={handleLogoutClick}>로그아웃</button>
+                    <button className="writePost" onClick={handlewritePost}>글 작성</button>
+                    <button className="myPost" onClick={handlemyPost}>내 글</button>
+                    <button className="allPost" onClick={handleAllPost}>전체 글</button>
                 </div>
             )}
         </div>
