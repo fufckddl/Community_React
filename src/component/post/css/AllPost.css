@@ -1,0 +1,18 @@
+.all_post_area{
+    width: 500px;
+}
+.all_post_area > .all_post_lists{
+    list-style: none;
+}
+.all_post_area > .all_post_lists > .all_post_block{
+    padding: 20px;
+    color: black;
+    margin-top: 20px;
+    height: 150px;
+    background-color: #ccc;
+}
+.all_post_area > .all_post_lists > .all_post_block > .all_post_title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 70px;
+}
