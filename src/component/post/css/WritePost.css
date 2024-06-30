@@ -1,0 +1,26 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 98vh; /* 내 화면 사이즈임 */
+}
+
+.post > .title{
+    width: 80%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.post > .content {
+    width: 80%;
+    height: 200px;
+    resize: none;
+}
+
+.post > .submit {
+    font-weight: bold;
+    margin-top: 20px;
+    width: 50px;
+    height: 30px;
+}
