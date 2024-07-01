@@ -18,7 +18,7 @@ function MyPost() {
             //인자에 현재 사용자 이메일(아이디)를 넣음
             if (currentUser) {
                 setUser(currentUser);
-                fetchUserPosts(currentUser.email);
+                fetchUserPosts(currentUser.displayName);
             //사용자를 찾을 수없다면 user를 초기화하고 post를 빈배열로 설정
             //사용자가 로그아웃하면 null로 처리
             } else {
@@ -33,11 +33,11 @@ function MyPost() {
         //useEffect 훅은 컴포넌트가 처음 마운트 될때 한번만 실행됨.
     }, []);
 
-
-    const fetchUserPosts = async (userEmail) => {
+    const fetchUserPosts = async (userName) => {
+        if(!userName) return;
         //qurery함수는 Firesotre의 콜랙션 함수와 where조건을 사용해서 특정 조건에 맞는
         //문서를 검색하는 쿼리를 생성(board컬랙션에서 author필드가 userEmail과 동일한 문서 찾음)
-        const q = query(collection(db, 'board'), where('author', '==', userEmail));
+        const q = query(collection(db, 'board'), where('author', '==', userName));
         //getDocs는 주어진 쿼리를 실행해서 해당 조건에 맞는 문서의 스냅샵을 가져옴
         const querySnapshot = await getDocs(q);
         //querySnapshot에서 문서를 순회하여 각 문서의 id와 데이터를 추출하고, 이를 배열로 변환해

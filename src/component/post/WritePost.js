@@ -30,7 +30,7 @@ function WritePost() {
             const data = {
                 content: content,
                 time: formattedDate,
-                author: user?.email || 'Anonymous'
+                author: user.displayName || 'Anonymous'
             };
             await setDoc(docRef, data);
             console.log('Document written with ID: ', docRef.id); //콘솔에는 제목 출력(문서id)

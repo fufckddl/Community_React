@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import {
     createUserWithEmailAndPassword,
+    updateProfile,
 } from 'firebase/auth';
 import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
 
 import './css/Register.css';
 
@@ -11,8 +13,9 @@ function Register() {
 
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
-    //const [registerName, setRegisterName] = useState('');
+    const [registerName, setRegisterName] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // 기본 폼 제출 동작 방지
@@ -20,6 +23,12 @@ function Register() {
         try {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
             console.log(user);
+            if(auth.currentUser){
+                await updateProfile(auth.currentUser, {
+                    displayName: registerName
+                })
+                navigate('/home');
+            }
         } catch (error) {
             console.error(error.message);
             setError(error.message);
@@ -45,6 +54,14 @@ function Register() {
                             type='password' 
                             placeholder='비밀번호'  
                             onChange={(event) => setRegisterPassword(event.target.value)} 
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label>닉네임</label>
+                        <input 
+                            type='name' 
+                            placeholder='닉네임'  
+                            onChange={(event) => setRegisterName(event.target.value)} 
                         />
                     </div>
                     <button type="submit">가입하기</button>
