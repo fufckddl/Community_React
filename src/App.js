@@ -9,6 +9,7 @@ import WritePost from './component/post/WritePost';
 import MyPost from './component/post/MyPost';
 import AllPost from './component/post/AllPost';
 import PostDetails from './component/post/PostDetails';
+import MyInfo from './component/post/MyInfo';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/mypost' element={<MyPost />}/>
         <Route path='/allpost' element={<AllPost />} />
         <Route path='/post/:id' element={<PostDetails />} />
+        <Route path='/myinfo' element={<MyInfo />} />
       </Routes>
     </Router> 
   );
