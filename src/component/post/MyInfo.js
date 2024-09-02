@@ -59,6 +59,10 @@ function MyInfo (){
                 <input type="password" onChange={event => { setNewPassword(event.target.value)}} />
                 <button type="submit">비밀번호 변경</button>
             </form>
+
+            <form>
+                <button>프로필 사진 변경</button>
+            </form>
                
             {pwerror && <p className="error">{pwerror}</p>}
         </div>

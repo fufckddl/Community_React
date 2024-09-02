@@ -48,12 +48,17 @@ function MainPage() {
                     <div className="imageContainer">
                         <img src={myImg} alt="User" className="myImg" />
                     </div>
-                    <p className="myId">닉네임 : {user.displayName}</p>
+
+                    <p className="myId">{user.displayName}</p>
                     <button className="logOut" onSubmit={logout} onClick={handleLogoutClick}>로그아웃</button>
-                    <button className="writePost" onClick={handlewritePost}>글 작성</button>
-                    <button className="myPost" onClick={handlemyPost}>내 글</button>
-                    <button className="allPost" onClick={handleAllPost}>전체 글</button>
-                    <button className="myInfo" onClick={handlemyInfo}>내 정보</button>
+
+                    <div className="action_list">
+                        <button className="writePost" onClick={handlewritePost}>글 작성</button>
+                        <button className="myPost" onClick={handlemyPost}>내 글</button>
+                        <button className="allPost" onClick={handleAllPost}>전체 글</button>
+                        <button className="myInfo" onClick={handlemyInfo}>내 정보</button>
+                    </div>
+                    
                 </div>
             )}
         </div>

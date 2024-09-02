@@ -34,6 +34,10 @@
 .detail_post_area > .detail_post_meta > .detail_post_time{
 }
 
+.detail_post_container > .detail_post_area > .detail_post_img{
+    width: 300px;
+    height: 300px;
+}
 .detail_post_content {
     font-size: 16px;
     line-height: 1.5;

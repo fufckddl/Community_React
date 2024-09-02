@@ -3,10 +3,9 @@
     padding: 0;
 }
 .subMenu {
-    width: 250px;
-    height: 100%;
-    background-color: black;
-    color: white;
+    width: 270px;
+    height: 100vh;
+    background-color: #F9FAFB;
 }
 .subMenu > .imageContainer {
     width: 100px;
@@ -21,13 +20,33 @@
 .subMenu > .imageContainer > .myImg{
     width: 100%;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 
 .subMenu > .myId {
     text-align: center;
+    color: aqua;
 }
 .subMenu > .logOut {
     margin: auto;
     display: block;
+    margin-bottom: 30px;
+}
+.subMenu > .action_list {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    width: max-content;
+    justify-content: center;
+}
+.subMenu > .action_list > .logOut, .allPost, .myPost, .myInfo, .writePost {
+    background-color: #3182F6;
+    border-radius: 5px;
+    color: #191F28;
+    font-weight: bold;
+    border-color: white;
+    width: 100px;
+    height: 30px;
 }

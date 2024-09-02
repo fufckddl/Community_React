@@ -34,6 +34,9 @@ function PostDetails() {
             </div>
             <hr />
             <p className='detail_post_content'>{post.content}</p>
+            { post.imageUrl && 
+              <img src={post.imageUrl} alt="no_img" className='detail_post_img'/>
+            }
           </div>
           </div>
         
